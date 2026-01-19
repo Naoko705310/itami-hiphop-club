@@ -3,7 +3,7 @@ node_modules/
 _gulp/node_modules/
 
 # Build output
-dist/
+# dist/  # GitHub Pagesで公開するため、コメントアウト
 
 # OS files
 .DS_Store
