@@ -37,6 +37,12 @@ const destPath = {
   html: "../dist/",
 };
 
+// ルートパス（GitHub Pages用）
+const rootPath = {
+  all: "../",
+  assets: "../assets/",
+};
+
 const browsers = ["last 2 versions", "> 5%", "ie = 11", "not ie <= 10", "ios >= 8", "and_chr >= 5", "Android >= 5"];
 
 // HTMLファイルのコピー
@@ -175,6 +181,15 @@ const browserSyncReload = (done) => {
 const clean = () => {
   return del(destPath.all, { force: true });
 };
+
+// distの内容をルートにコピー（GitHub Pages用）
+const copyToRoot = () => {
+  return src([
+    "../dist/index.html",
+    "../dist/assets/**/*"
+  ], { base: "../dist/" })
+    .pipe(dest(rootPath.all));
+};
 // ファイルの監視
 const watchFiles = () => {
   watch(srcPath.css, series(cssSass, browserSyncReload));
@@ -187,4 +202,4 @@ const watchFiles = () => {
 exports.default = series(series(cssSass, jsBabel, imgImagemin, htmlCopy), parallel(watchFiles, browserSyncFunc));
 
 // 本番用タスク
-exports.build = series(clean, cssSass, jsBabel, imgImagemin, htmlCopy);
+exports.build = series(clean, cssSass, jsBabel, imgImagemin, htmlCopy, copyToRoot);
