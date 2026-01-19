@@ -2,13 +2,11 @@
 
 // お問い合わせ
 .contact {
-  margin-top: rem(80);
-  padding-top: rem(60);
+  padding-top: rem(100);
   padding-bottom: rem(60);
   background-color: $color-main;
   @include mq(md) {
-    margin-top: rem(120);
-    padding-top: rem(80);
+    padding-top: rem(160);
     padding-bottom: rem(80);
   }
 }
@@ -93,16 +91,304 @@
   }
 }
 
+.contact__form-wrapper {
+  max-width: rem(700);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(60);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
+.contact__form-header {
+  text-align: center;
+  margin-bottom: rem(40);
+  @include mq(md) {
+    margin-bottom: rem(50);
+  }
+}
+
+.contact__form-label {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $white;
+  font-family: $second-font-family;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.contact__form-title {
+  font-size: rem(24);
+  font-weight: $bold;
+  color: $white;
+  margin-top: rem(8);
+  @include mq(md) {
+    font-size: rem(28);
+    margin-top: rem(12);
+  }
+}
+
 .contact__form {
+  background-color: $white;
+  padding: rem(32) rem(24);
+  border-radius: rem(16);
+  box-shadow: 0 rem(4) rem(16) rgba(0, 0, 0, 0.1);
+  @include mq(md) {
+    padding: rem(48) rem(40);
+    border-radius: rem(20);
+  }
+}
+
+.contact__form-item {
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(28);
+  }
+}
+
+.contact__form-item:first-child {
+  margin-top: 0;
+}
+
+.contact__form-label-text {
+  display: block;
+  font-size: rem(14);
+  font-weight: $bold;
+  color: $black;
+  text-align: left;
+  margin-bottom: rem(8);
+  @include mq(md) {
+    font-size: rem(16);
+    margin-bottom: rem(10);
+  }
+}
+
+.contact__form-required {
+  color: #e74c3c;
+  margin-left: rem(2);
+}
+
+.contact__form-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(24);
+  }
+}
+
+.contact__form-radio-label {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  cursor: pointer;
+  position: relative;
+  padding: rem(12) rem(16);
+  border: 2px solid #d0d0d0;
+  border-radius: rem(8);
+  transition: all 0.3s;
+  @include mq(md) {
+    padding: rem(14) rem(20);
+  }
+}
+
+.contact__form-radio-label:hover {
+  border-color: $color-main;
+  background-color: rgba($color-main, 0.05);
+}
+
+.contact__form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: rem(20);
+  height: rem(20);
+  border: 2px solid $color-main;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.3s;
+  background-color: $white;
+  @include mq(md) {
+    width: rem(22);
+    height: rem(22);
+  }
+}
+
+.contact__form-radio:checked {
+  background-color: $color-main;
+  border-color: $color-main;
+}
+
+.contact__form-radio:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(8);
+  height: rem(8);
+  border-radius: 50%;
+  background-color: $white;
+  @include mq(md) {
+    width: rem(10);
+    height: rem(10);
+  }
+}
+
+.contact__form-radio:checked ~ .contact__form-radio-text {
+  font-weight: $bold;
+  color: $color-main;
+}
+
+.contact__form-radio:checked {
+  & ~ .contact__form-radio-text {
+    font-weight: $bold;
+    color: $color-main;
+  }
+}
+
+input.contact__form-radio:checked + .contact__form-radio-text {
+  font-weight: $bold;
+  color: $color-main;
+}
+
+.contact__form-radio-text {
+  font-size: rem(14);
+  color: $black;
+  transition: all 0.3s;
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.contact__form-item--trial {
+  display: block;
   @include mq(md) {
   }
 }
 
-.contact__form-note {
+.contact__form-help-text {
   font-size: rem(12);
-  color: $white;
-  opacity: 0.8;
+  color: #666;
+  margin-top: rem(6);
+  line-height: 1.6;
+  @include mq(md) {
+    font-size: rem(13);
+    margin-top: rem(8);
+  }
+}
+
+.contact__form-input,
+.contact__form-textarea {
+  width: 100%;
+  padding: rem(12) rem(16);
+  font-size: rem(14);
+  color: $black;
+  border: 1px solid #d0d0d0;
+  border-radius: rem(8);
+  background-color: $white;
+  transition: border-color 0.3s;
+  @include mq(md) {
+    padding: rem(14) rem(18);
+    font-size: rem(16);
+  }
+}
+
+.contact__form-input:focus,
+.contact__form-textarea:focus {
+  outline: none;
+  border-color: $color-main;
+}
+
+.contact__form-input::placeholder,
+.contact__form-textarea::placeholder {
+  color: #999;
+}
+
+.contact__form-textarea {
+  resize: vertical;
+  min-height: rem(150);
+  font-family: inherit;
+  line-height: 1.6;
+  @include mq(md) {
+    min-height: rem(180);
+  }
+}
+
+.contact__form-privacy {
+  margin-top: rem(24);
+  display: flex;
+  align-items: flex-start;
+  gap: rem(8);
+  @include mq(md) {
+    margin-top: rem(28);
+  }
+}
+
+.contact__form-checkbox {
+  width: rem(18);
+  height: rem(18);
+  margin-top: rem(2);
+  cursor: pointer;
+  flex-shrink: 0;
+  @include mq(md) {
+    width: rem(20);
+    height: rem(20);
+  }
+}
+
+.contact__form-privacy-text {
+  font-size: rem(13);
+  color: $black;
+  line-height: 1.6;
   @include mq(md) {
     font-size: rem(14);
   }
+}
+
+.contact__form-privacy-link {
+  color: $color-main;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+
+.contact__form-privacy-link:hover {
+  opacity: 0.7;
+}
+
+.contact__form-submit {
+  margin-top: rem(32);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.contact__form-button {
+  display: inline-block;
+  min-width: rem(200);
+  padding: rem(16) rem(48);
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $black;
+  background-color: #f4e4d4;
+  border: none;
+  border-radius: rem(30);
+  cursor: pointer;
+  transition: opacity 0.3s;
+  @include mq(md) {
+    min-width: rem(250);
+    padding: rem(18) rem(60);
+    font-size: rem(18);
+    border-radius: rem(35);
+  }
+}
+
+.contact__form-button:hover {
+  opacity: 0.8;
 }

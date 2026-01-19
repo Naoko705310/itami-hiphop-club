@@ -2,22 +2,20 @@
 
 // 教室の特徴
 .feature {
-  margin-top: rem(80);
-  padding-top: rem(60);
+  padding-top: rem(100);
   padding-bottom: rem(60);
   background-color: #fefcf8;
   @include mq(md) {
-    margin-top: rem(120);
-    padding-top: rem(80);
+    padding-top: rem(160);
     padding-bottom: rem(80);
   }
 }
 
-.feature__inner {
+.feature__inner.inner {
+  max-width: rem(800);
+  margin-left: auto;
+  margin-right: auto;
   @include mq(md) {
-    max-width: rem(800);
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 

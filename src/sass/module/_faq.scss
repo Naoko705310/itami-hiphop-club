@@ -2,13 +2,11 @@
 
 // よくある質問
 .faq {
-  margin-top: rem(80);
-  padding-top: rem(60);
+  padding-top: rem(100);
   padding-bottom: rem(60);
   background-color: #f9f9f9;
   @include mq(md) {
-    margin-top: rem(120);
-    padding-top: rem(80);
+    padding-top: rem(160);
     padding-bottom: rem(80);
   }
 }
