@@ -131,7 +131,7 @@
   font-size: rem(20);
   font-weight: $bold;
   color: $color-main;
-  padding-left: rem(16);
+  padding-left: rem(30);
   position: relative;
   @include mq(md) {
     font-size: rem(24);
@@ -144,9 +144,16 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: rem(8);
-  height: rem(8);
-  background-color: $black;
+  width: rem(20);
+  height: rem(20);
+  background-image: url(../images/common/music-note.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include mq(md) {
+    width: rem(24);
+    height: rem(24);
+  }
 }
 
 .price__course-description {

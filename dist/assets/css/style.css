@@ -1320,19 +1320,22 @@ input.contact__form-radio:checked + .contact__form-radio-text {
 	color: green;
 	font-size: 1.25rem;
 	font-weight: 700;
-	padding-left: 1rem;
+	padding-left: 1.875rem;
 	position: relative;
 }
 
 .price__course-title::before {
-	background-color: #111;
+	background-image: url(../images/common/music-note.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	content: "";
-	height: 0.5rem;
+	height: 1.25rem;
 	left: 0;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 0.5rem;
+	width: 1.25rem;
 }
 
 .price__course-description {
@@ -2061,6 +2064,11 @@ html {
 
 .price__course-title {
 	font-size: 1.5rem;
+}
+
+.price__course-title::before {
+	height: 1.5rem;
+	width: 1.5rem;
 }
 
 .price__course-description {
