@@ -150,6 +150,28 @@
   background-color: $black;
 }
 
+.price__course-description {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
+
+.price__course-description-text {
+  font-size: rem(14);
+  line-height: 1.8;
+  color: $black;
+  margin-top: rem(12);
+  @include mq(md) {
+    font-size: rem(15);
+    margin-top: rem(16);
+  }
+}
+
+.price__course-description-text:first-child {
+  margin-top: 0;
+}
+
 .price__course-list {
   margin-top: rem(24);
   @include mq(md) {

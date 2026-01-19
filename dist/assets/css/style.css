@@ -1310,6 +1310,21 @@ input.contact__form-radio:checked + .contact__form-radio-text {
 	width: 0.5rem;
 }
 
+.price__course-description {
+	margin-top: 1rem;
+}
+
+.price__course-description-text {
+	color: #111;
+	font-size: 0.875rem;
+	line-height: 1.8;
+	margin-top: 0.75rem;
+}
+
+.price__course-description-text:first-child {
+	margin-top: 0;
+}
+
 .price__course-list {
 	margin-top: 1.5rem;
 }
@@ -2014,6 +2029,15 @@ html {
 
 .price__course-title {
 	font-size: 1.5rem;
+}
+
+.price__course-description {
+	margin-top: 1.25rem;
+}
+
+.price__course-description-text {
+	font-size: 0.9375rem;
+	margin-top: 1rem;
 }
 
 .price__course-list {
