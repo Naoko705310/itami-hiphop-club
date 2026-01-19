@@ -444,15 +444,33 @@ legend {
 	cursor: pointer;
 	display: flex;
 	gap: 0.625rem;
+	padding-left: 1.875rem;
+	position: relative;
 }
 
-.contact__form-radio {
-	accent-color: green;
-	cursor: pointer;
-	flex-shrink: 0;
+.contact__form-radio-label::before {
+	background-color: #fff;
+	border: 2px solid #333;
+	border-radius: 50%;
+	content: "";
 	height: 1.125rem;
-	margin: 0;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 	width: 1.125rem;
+}
+
+.contact__form-radio-label:has(.contact__form-radio:checked)::after {
+	background-color: #333;
+	border-radius: 50%;
+	content: "";
+	height: 0.5rem;
+	left: 0.3125rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.5rem;
 }
 
 .contact__form-radio-text {
@@ -1559,11 +1577,18 @@ html {
 
 .contact__form-radio-label {
 	gap: 0.75rem;
+	padding-left: 2rem;
 }
 
-.contact__form-radio {
+.contact__form-radio-label::before {
 	height: 1.25rem;
 	width: 1.25rem;
+}
+
+.contact__form-radio-label:has(.contact__form-radio:checked)::after {
+	height: 0.5rem;
+	left: 0.375rem;
+	width: 0.5rem;
 }
 
 .contact__form-radio-text {
