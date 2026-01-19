@@ -244,31 +244,46 @@ legend {
 
 .access {
 	background-color: #fefefe;
-	margin-top: 5rem;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
 }
 
 .access__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
 	text-align: center;
 }
 
+.access__address {
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
+.access__address-title {
+	background-color: #e8f0f5;
+	border-radius: 1.25rem;
+	color: #111;
+	display: inline-block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	padding: 0.5rem 1.5rem;
+}
+
 .access__text {
-	color: orange;
+	color: #111;
 	font-size: 1.125rem;
 	font-weight: 700;
-	margin-bottom: 0.5rem;
+	margin-top: 1.25rem;
 	text-align: center;
 }
 
 .access__note {
-	color: #111;
-	font-size: 0.875rem;
-	margin-bottom: 2rem;
+	color: #666;
+	font-size: 0.8125rem;
+	line-height: 1.8;
+	margin-top: 1rem;
 	text-align: center;
 }
 
@@ -277,6 +292,7 @@ legend {
 	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 2rem;
 	max-width: 50rem;
 	overflow: hidden;
 }
@@ -290,9 +306,8 @@ legend {
 
 .contact {
 	background-color: green;
-	margin-top: 5rem;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
 }
 
 .contact__inner {
@@ -303,23 +318,23 @@ legend {
 	color: #fff;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 
 .contact__text {
 	color: #fff;
 	font-size: 1rem;
 	line-height: 1.8;
-	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
 }
 
 .contact__buttons {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	margin-bottom: 2.5rem;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 2.5rem;
 	max-width: 25rem;
 }
 
@@ -346,9 +361,235 @@ legend {
 	color: #fff;
 }
 
-.contact__form-note {
+.contact__form-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.75rem;
+	max-width: 43.75rem;
+}
+
+.contact__form-header {
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.contact__form-label {
 	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.contact__form-title {
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-top: 0.5rem;
+}
+
+.contact__form {
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+	padding: 2rem 1.5rem;
+}
+
+.contact__form-item {
+	margin-top: 1.5rem;
+}
+
+.contact__form-item:first-child {
+	margin-top: 0;
+}
+
+.contact__form-label-text {
+	color: #111;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	text-align: left;
+}
+
+.contact__form-required {
+	color: #e74c3c;
+	margin-left: 0.125rem;
+}
+
+.contact__form-radio-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.contact__form-radio-label {
+	align-items: center;
+	border: 2px solid #d0d0d0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	display: flex;
+	gap: 0.5rem;
+	padding: 0.75rem 1rem;
+	position: relative;
+	transition: all 0.3s;
+}
+
+.contact__form-radio-label:hover {
+	background-color: rgba(0, 128, 0, 0.05);
+	border-color: green;
+}
+
+.contact__form-radio {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border: 2px solid green;
+	border-radius: 50%;
+	cursor: pointer;
+	flex-shrink: 0;
+	height: 1.25rem;
+	position: relative;
+	transition: all 0.3s;
+	width: 1.25rem;
+}
+
+.contact__form-radio:checked {
+	background-color: green;
+	border-color: green;
+}
+
+.contact__form-radio:checked::after {
+	background-color: #fff;
+	border-radius: 50%;
+	content: "";
+	height: 0.5rem;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 0.5rem;
+}
+
+.contact__form-radio:checked ~ .contact__form-radio-text {
+	color: green;
+	font-weight: 700;
+}
+
+.contact__form-radio:checked ~ .contact__form-radio-text {
+	color: green;
+	font-weight: 700;
+}
+
+input.contact__form-radio:checked + .contact__form-radio-text {
+	color: green;
+	font-weight: 700;
+}
+
+.contact__form-radio-text {
+	color: #111;
+	font-size: 0.875rem;
+	transition: all 0.3s;
+}
+
+.contact__form-item--trial {
+	display: block;
+}
+
+.contact__form-help-text {
+	color: #666;
 	font-size: 0.75rem;
+	line-height: 1.6;
+	margin-top: 0.375rem;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+	background-color: #fff;
+	border: 1px solid #d0d0d0;
+	border-radius: 0.5rem;
+	color: #111;
+	font-size: 0.875rem;
+	padding: 0.75rem 1rem;
+	transition: border-color 0.3s;
+	width: 100%;
+}
+
+.contact__form-input:focus,
+.contact__form-textarea:focus {
+	border-color: green;
+	outline: none;
+}
+
+.contact__form-input::-moz-placeholder,
+.contact__form-textarea::-moz-placeholder {
+	color: #999;
+}
+
+.contact__form-input::placeholder,
+.contact__form-textarea::placeholder {
+	color: #999;
+}
+
+.contact__form-textarea {
+	font-family: inherit;
+	line-height: 1.6;
+	min-height: 9.375rem;
+	resize: vertical;
+}
+
+.contact__form-privacy {
+	align-items: flex-start;
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+}
+
+.contact__form-checkbox {
+	cursor: pointer;
+	flex-shrink: 0;
+	height: 1.125rem;
+	margin-top: 0.125rem;
+	width: 1.125rem;
+}
+
+.contact__form-privacy-text {
+	color: #111;
+	font-size: 0.8125rem;
+	line-height: 1.6;
+}
+
+.contact__form-privacy-link {
+	-webkit-text-decoration: underline;
+	color: green;
+	text-decoration: underline;
+	transition: opacity 0.3s;
+}
+
+.contact__form-privacy-link:hover {
+	opacity: 0.7;
+}
+
+.contact__form-submit {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.contact__form-button {
+	background-color: #f4e4d4;
+	border: none;
+	border-radius: 1.875rem;
+	color: #111;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 700;
+	min-width: 12.5rem;
+	padding: 1rem 3rem;
+	transition: opacity 0.3s;
+}
+
+.contact__form-button:hover {
 	opacity: 0.8;
 }
 
@@ -362,7 +603,13 @@ legend {
 	align-items: flex-start;
 	display: flex;
 	gap: 0.75rem;
-	margin-bottom: 1rem;
+}
+
+.faq-item__answer {
+	align-items: flex-start;
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 1rem;
 }
 
 .faq-item__q {
@@ -378,13 +625,6 @@ legend {
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.6;
-}
-
-.faq-item__answer {
-	align-items: flex-start;
-	display: flex;
-	gap: 0.75rem;
-	padding-left: 1.75rem;
 }
 
 .faq-item__a {
@@ -403,16 +643,15 @@ legend {
 
 .faq {
 	background-color: #f9f9f9;
-	margin-top: 5rem;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
 }
 
 .faq__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -420,6 +659,7 @@ legend {
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
+	list-style: none;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 50rem;
@@ -438,16 +678,18 @@ legend {
 	transform: translateY(-0.25rem);
 }
 
-.feature-card__icon {
-	margin-bottom: 1.25rem;
-}
-
 .feature-card__image {
-	-o-object-fit: cover;
+	aspect-ratio: 4/3;
 	border-radius: 0.5rem;
 	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-	height: auto;
 	max-height: 12.5rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.feature-card__image img {
+	-o-object-fit: cover;
+	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
@@ -456,7 +698,7 @@ legend {
 	color: green;
 	font-size: 1.25rem;
 	font-weight: 700;
-	margin-bottom: 0.75rem;
+	margin-top: 1.25rem;
 	text-align: center;
 }
 
@@ -464,28 +706,97 @@ legend {
 	color: #333;
 	font-size: 0.875rem;
 	line-height: 1.8;
+	margin-top: 1.25rem;
 	text-align: center;
 }
 
+.feature-cards {
+	grid-gap: 2rem;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+}
+
 .feature {
-	background-color: #fafafa;
-	margin-top: 5rem;
+	background-color: #fefcf8;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
+}
+
+.feature__inner.inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50rem;
+}
+
+.feature__header {
+	text-align: center;
+}
+
+.feature__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .feature__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 2.5rem;
+	margin-top: 0.5rem;
 	text-align: center;
 }
 
-.feature__cards {
+.feature__items {
+	list-style: none;
+	margin-top: 2.5rem;
+}
+
+.feature__item {
+	border-bottom: 1px solid #e0e0e0;
 	display: flex;
-	flex-direction: column;
-	gap: 2rem;
+	gap: 1.25rem;
+	margin-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.feature__item:first-child {
+	margin-top: 0;
+}
+
+.feature__item:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.feature__item-number {
+	color: orange;
+	flex-shrink: 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature__item-content {
+	flex: 1;
+	padding-top: 0.25rem;
+}
+
+.feature__item-title {
+	color: #111;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+.feature__item-text {
+	color: #111;
+	font-size: 0.875rem;
+	line-height: 1.8;
+	margin-top: 0.75rem;
 }
 
 .footer {
@@ -536,7 +847,6 @@ legend {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1.5rem;
 }
 
 .fv__logo-main {
@@ -545,7 +855,7 @@ legend {
 	font-size: 3rem;
 	font-weight: 700;
 	letter-spacing: 0.25rem;
-	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 .fv__logo-sub {
@@ -556,22 +866,43 @@ legend {
 
 .fv__title {
 	color: #111;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	font-weight: 700;
 	line-height: 1.6;
-	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .fv__text {
 	color: #111;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 1.8;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 
 .fv__text--sub {
 	font-size: 0.875rem;
-	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+
+.fv__list {
+	list-style: none;
+	margin-top: 1.5rem;
+}
+
+.fv__list-item {
+	color: #111;
+	font-size: 0.875rem;
+	line-height: 1.8;
+	margin-top: 0.75rem;
+}
+
+.fv__list-item:first-child {
+	margin-top: 0;
+}
+
+.fv__text--closing {
+	font-size: 0.8125rem;
+	margin-top: 1.5rem;
 }
 
 .fv__button-wrapper {
@@ -597,37 +928,54 @@ legend {
 
 .gallery {
 	background-color: #f9f9f9;
-	margin-top: 5rem;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
+}
+
+.gallery__header {
+	text-align: center;
+}
+
+.gallery__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .gallery__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 1rem;
+	margin-top: 0.5rem;
 	text-align: center;
 }
 
 .gallery__text {
 	color: #111;
 	font-size: 0.875rem;
-	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
 .gallery__items {
-	grid-gap: 1.5rem;
+	grid-gap: 0.5rem;
 	display: grid;
-	gap: 1.5rem;
+	gap: 0.5rem;
 	grid-template-columns: 1fr;
+	list-style: none;
+	margin-top: 2.5rem;
 }
 
 .gallery__image {
+	aspect-ratio: 4/3;
+	overflow: hidden;
+	width: 100%;
+}
+
+.gallery__image img {
 	-o-object-fit: cover;
-	border-radius: 0.5rem;
-	height: auto;
+	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
@@ -663,40 +1011,55 @@ legend {
 .inner {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
 	width: 100%;
 }
 
 .instructor {
 	background-color: #fefefe;
-	margin-top: 5rem;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
+}
+
+.instructor__header {
+	text-align: center;
+}
+
+.instructor__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .instructor__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 2.5rem;
+	margin-top: 0.5rem;
 	text-align: center;
 }
 
 .instructor__content {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-}
-
-.instructor__image-wrapper {
-	flex-shrink: 0;
+	margin-top: 2.5rem;
 }
 
 .instructor__image {
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	flex-shrink: 0;
+	overflow: hidden;
+	width: 80%;
+}
+
+.instructor__image img {
 	-o-object-fit: cover;
-	border-radius: 0.5rem;
-	height: auto;
+	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
@@ -705,89 +1068,101 @@ legend {
 	color: green;
 	font-size: 1.5rem;
 	font-weight: 700;
-	margin-bottom: 1.25rem;
+	margin-top: 1.25rem;
 }
 
 .instructor__text {
 	color: #111;
 	font-size: 0.875rem;
 	line-height: 1.8;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
 }
 
 .instructor__text--emphasis {
 	color: orange;
 	font-weight: 700;
-	margin-bottom: 0;
 }
 
-.lesson-step__number {
-	align-items: center;
+.lesson-card {
 	background-color: #fff;
-	border: 0.1875rem solid green;
-	border-radius: 50%;
-	color: green;
-	display: inline-flex;
-	font-size: 1.5rem;
-	font-weight: 700;
-	height: 3rem;
-	justify-content: center;
-	margin-bottom: 1rem;
-	width: 3rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
 }
 
-.lesson-step__title {
+.lesson-card__title {
 	color: green;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	font-weight: 700;
-	margin-bottom: 0.5rem;
+	line-height: 1.5;
+	text-align: center;
 }
 
-.lesson-step__text {
+.lesson-card__content {
+	flex: 1;
+	margin-top: 1.25rem;
+}
+
+.lesson-card__text {
 	color: #111;
 	font-size: 0.875rem;
 	line-height: 1.8;
+	margin-top: 0.75rem;
+}
+
+.lesson-card__text:first-child {
+	margin-top: 0;
+}
+
+.lesson-card__image {
+	aspect-ratio: 4/3;
+	border-radius: 0.5rem;
+	margin-top: 1.25rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.lesson-card__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .lesson {
-	background-color: #f9f9f9;
-	margin-top: 5rem;
+	background-color: #fef8f3;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
+}
+
+.lesson__header {
+	text-align: center;
+}
+
+.lesson__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .lesson__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 2.5rem;
+	margin-top: 0.5rem;
 	text-align: center;
 }
 
-.lesson__steps {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	gap: 2.5rem;
-}
-
-.lesson__step {
-	flex: 1;
-	position: relative;
-	text-align: center;
-}
-
-.lesson__step:not(:last-child)::after {
-	-webkit-clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	background-color: green;
-	bottom: -2rem;
-	clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	content: "";
-	height: 1.25rem;
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
-	width: 2.5rem;
+.lesson__cards {
+	grid-gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+	list-style: none;
+	margin-top: 2.5rem;
 }
 
 .price-card {
@@ -804,7 +1179,13 @@ legend {
 	color: orange;
 	font-size: 2rem;
 	font-weight: 700;
-	margin-bottom: 1.5rem;
+}
+
+.price-card__list {
+	list-style: none;
+	margin: 0;
+	margin-top: 1.5rem;
+	padding: 0;
 }
 
 .price-card__list {
@@ -827,63 +1208,225 @@ legend {
 }
 
 .price {
-	background-color: #fafafa;
-	margin-top: 5rem;
+	background-color: #fefcf8;
 	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
+	padding-top: 6.25rem;
+}
+
+.price__header {
+	text-align: center;
+}
+
+.price__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .price__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-bottom: 2.5rem;
+	margin-top: 0.5rem;
 	text-align: center;
 }
 
-.schedule {
-	background-color: #f9f9f9;
-	margin-top: 5rem;
-	padding-bottom: 3.75rem;
-	padding-top: 3.75rem;
-}
-
-.schedule__title {
-	color: green;
-	font-size: 1.75rem;
-	font-weight: 700;
-	margin-bottom: 2.5rem;
-	text-align: center;
-}
-
-.schedule__content {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 31.25rem;
-	text-align: center;
-}
-
-.schedule__day {
-	margin-bottom: 1.5rem;
-}
-
-.schedule__day-text {
-	color: #111;
-	font-size: 1.25rem;
-	font-weight: 700;
-	margin-bottom: 0.5rem;
-}
-
-.schedule__time {
-	color: orange;
-	font-size: 1.5rem;
-	font-weight: 700;
-}
-
-.schedule__note {
+.price__description {
 	color: #111;
 	font-size: 0.875rem;
 	line-height: 1.8;
+	margin-top: 2.5rem;
+	text-align: center;
+}
+
+.price__table-wrapper {
+	margin-top: 2.5rem;
+	overflow-x: auto;
+}
+
+.price__table {
+	background-color: #fff;
+	border-collapse: collapse;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	width: 100%;
+}
+
+.price__table-header {
+	background-color: #e8f0f5;
+	border-bottom: 1px solid #d0d0d0;
+	color: #111;
+	font-size: 0.875rem;
+	font-weight: 700;
+	padding: 1rem 0.75rem;
+	text-align: center;
+}
+
+.price__table-data {
+	border-bottom: 1px solid #e0e0e0;
+	color: #111;
+	font-size: 0.875rem;
+	padding: 1rem 0.75rem;
+	text-align: center;
+}
+
+.price__table tbody tr:last-child .price__table-data {
+	border-bottom: none;
+}
+
+.price__courses {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	list-style: none;
+	margin-top: 2.5rem;
+}
+
+.price__course {
+	background-color: #fff;
+	border-radius: 0.75rem;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+	padding: 1.5rem;
+}
+
+.price__course-title {
+	color: green;
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-left: 1rem;
+	position: relative;
+}
+
+.price__course-title::before {
+	background-color: #111;
+	content: "";
+	height: 0.5rem;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.5rem;
+}
+
+.price__course-list {
+	margin-top: 1.5rem;
+}
+
+.price__course-item {
+	border-bottom: 1px solid #f0f0f0;
+	display: flex;
+	gap: 1rem;
+	padding: 0.75rem 0;
+}
+
+.price__course-item:last-child {
+	border-bottom: none;
+}
+
+.price__course-term {
+	color: #111;
+	flex-shrink: 0;
+	font-size: 0.875rem;
+	font-weight: 700;
+	width: 5rem;
+}
+
+.price__course-desc {
+	color: #111;
+	flex: 1;
+	font-size: 0.875rem;
+}
+
+.price__notes {
+	list-style: none;
+	margin-top: 1.5rem;
+}
+
+.price__note {
+	color: #666;
+	font-size: 0.8125rem;
+	line-height: 1.8;
+	margin-top: 0.5rem;
+}
+
+.price__note:first-child {
+	margin-top: 0;
+}
+
+.trial {
+	background-color: #fefcf8;
+	padding-bottom: 3.75rem;
+	padding-top: 6.25rem;
+}
+
+.trial__content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+
+.trial__text-wrapper {
+	text-align: center;
+}
+
+.trial__price {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.75rem;
+	font-weight: 700;
+}
+
+.trial__text {
+	color: #111;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.6;
+	margin-top: 0.75rem;
+}
+
+.trial__message {
+	color: #111;
+	font-size: 1rem;
+	margin-top: 1.25rem;
+}
+
+.trial__button-wrapper {
+	margin-top: 2rem;
+}
+
+.trial__button {
+	-webkit-text-decoration: none;
+	background-color: #f4e4d4;
+	border-radius: 1.875rem;
+	color: #111;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 1rem 3rem;
+	text-decoration: none;
+	transition: opacity 0.3s;
+}
+
+.trial__button:hover {
+	opacity: 0.8;
+}
+
+.trial__image {
+	border-radius: 50%;
+	flex-shrink: 0;
+	height: 15.625rem;
+	overflow: hidden;
+	width: 15.625rem;
+}
+
+.trial__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -897,33 +1440,43 @@ legend {
 }
 
 html {
-	font-size: 1.4545454545vw;
+	font-size: 1.25vw;
 }
 
 .access {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
 }
 
 .access__title {
 	font-size: 2.25rem;
-	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+
+.access__address {
+	margin-top: 3.125rem;
+}
+
+.access__address-title {
+	border-radius: 1.5rem;
+	font-size: 1rem;
+	padding: 0.625rem 2rem;
 }
 
 .access__text {
 	font-size: 1.25rem;
-	margin-bottom: 0.75rem;
+	margin-top: 1.5rem;
 }
 
 .access__note {
-	font-size: 1rem;
-	margin-bottom: 2.5rem;
+	font-size: 0.875rem;
+	margin-top: 1.25rem;
 }
 
 .access__map {
 	border-radius: 0.75rem;
 	box-shadow: 0 0.375rem 1rem rgba(0, 0, 0, 0.12);
+	margin-top: 2.5rem;
 }
 
 .access__map iframe {
@@ -931,26 +1484,25 @@ html {
 }
 
 .contact {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
 }
 
 .contact__title {
 	font-size: 2.25rem;
-	margin-bottom: 1.25rem;
+	margin-top: 1.25rem;
 }
 
 .contact__text {
 	font-size: 1.125rem;
 	line-height: 1.8;
-	margin-bottom: 3rem;
+	margin-top: 3rem;
 }
 
 .contact__buttons {
 	flex-direction: row;
 	gap: 1.5rem;
-	margin-bottom: 3rem;
+	margin-top: 3rem;
 	max-width: 37.5rem;
 }
 
@@ -961,8 +1513,97 @@ html {
 	padding: 1.125rem 2.5rem;
 }
 
-.contact__form-note {
+.contact__form-wrapper {
+	margin-top: 5rem;
+}
+
+.contact__form-header {
+	margin-bottom: 3.125rem;
+}
+
+.contact__form-label {
+	font-size: 1.125rem;
+}
+
+.contact__form-title {
+	font-size: 1.75rem;
+	margin-top: 0.75rem;
+}
+
+.contact__form {
+	border-radius: 1.25rem;
+	padding: 3rem 2.5rem;
+}
+
+.contact__form-item {
+	margin-top: 1.75rem;
+}
+
+.contact__form-label-text {
+	font-size: 1rem;
+	margin-bottom: 0.625rem;
+}
+
+.contact__form-radio-group {
+	flex-direction: row;
+	gap: 1.5rem;
+}
+
+.contact__form-radio-label {
+	padding: 0.875rem 1.25rem;
+}
+
+.contact__form-radio {
+	height: 1.375rem;
+	width: 1.375rem;
+}
+
+.contact__form-radio:checked::after {
+	height: 0.625rem;
+	width: 0.625rem;
+}
+
+.contact__form-radio-text {
+	font-size: 1rem;
+}
+
+.contact__form-help-text {
+	font-size: 0.8125rem;
+	margin-top: 0.5rem;
+}
+
+.contact__form-input,
+.contact__form-textarea {
+	font-size: 1rem;
+	padding: 0.875rem 1.125rem;
+}
+
+.contact__form-textarea {
+	min-height: 11.25rem;
+}
+
+.contact__form-privacy {
+	margin-top: 1.75rem;
+}
+
+.contact__form-checkbox {
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+.contact__form-privacy-text {
 	font-size: 0.875rem;
+}
+
+.contact__form-submit {
+	margin-top: 2.5rem;
+}
+
+.contact__form-button {
+	border-radius: 2.1875rem;
+	font-size: 1.125rem;
+	min-width: 15.625rem;
+	padding: 1.125rem 3.75rem;
 }
 
 .faq-item {
@@ -972,7 +1613,11 @@ html {
 
 .faq-item__question {
 	gap: 1rem;
-	margin-bottom: 1.25rem;
+}
+
+.faq-item__answer {
+	gap: 1rem;
+	margin-top: 1.25rem;
 }
 
 .faq-item__q {
@@ -982,11 +1627,6 @@ html {
 .faq-item__question-text {
 	font-size: 1.125rem;
 	line-height: 1.6;
-}
-
-.faq-item__answer {
-	gap: 1rem;
-	padding-left: 2.25rem;
 }
 
 .faq-item__a {
@@ -999,14 +1639,13 @@ html {
 }
 
 .faq {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
 }
 
 .faq__title {
 	font-size: 2.25rem;
-	margin-bottom: 3.75rem;
+	margin-top: 3.75rem;
 }
 
 .faq__items {
@@ -1024,10 +1663,6 @@ html {
 	transform: translateY(-0.375rem);
 }
 
-.feature-card__icon {
-	margin-bottom: 1.5rem;
-}
-
 .feature-card__image {
 	border-radius: 0.75rem;
 	box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.12);
@@ -1036,7 +1671,7 @@ html {
 
 .feature-card__title {
 	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	margin-top: 1.5rem;
 }
 
 .feature-card__text {
@@ -1044,20 +1679,50 @@ html {
 	line-height: 1.8;
 }
 
+.feature-cards {
+	gap: 2.5rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
 .feature {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
+}
+
+.feature__label {
+	font-size: 1.125rem;
 }
 
 .feature__title {
 	font-size: 2.25rem;
-	margin-bottom: 3.75rem;
+	margin-top: 0.75rem;
 }
 
-.feature__cards {
-	flex-direction: row;
-	gap: 2.5rem;
+.feature__items {
+	margin-top: 3.75rem;
+}
+
+.feature__item {
+	gap: 2rem;
+	margin-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.feature__item-number {
+	font-size: 5rem;
+}
+
+.feature__item-content {
+	padding-top: 0.5rem;
+}
+
+.feature__item-title {
+	font-size: 1.375rem;
+}
+
+.feature__item-text {
+	font-size: 1rem;
+	margin-top: 1rem;
 }
 
 .footer {
@@ -1094,13 +1759,12 @@ html {
 	flex-direction: row;
 	gap: 1rem;
 	justify-content: center;
-	margin-bottom: 2rem;
 }
 
 .fv__logo-main {
 	font-size: 4rem;
 	letter-spacing: 0.375rem;
-	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .fv__logo-sub {
@@ -1110,7 +1774,7 @@ html {
 .fv__title {
 	font-size: 3rem;
 	line-height: 1.5;
-	margin-bottom: 2rem;
+	margin-top: 2rem;
 }
 
 .fv__title-br {
@@ -1118,14 +1782,26 @@ html {
 }
 
 .fv__text {
-	font-size: 1.125rem;
-	line-height: 1.8;
-	margin-bottom: 1.25rem;
+	margin-top: 1.25rem;
 }
 
 .fv__text--sub {
 	font-size: 1rem;
-	margin-bottom: 2.5rem;
+	margin-top: 2.5rem;
+}
+
+.fv__list {
+	margin-top: 2rem;
+}
+
+.fv__list-item {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.fv__text--closing {
+	font-size: 0.875rem;
+	margin-top: 2rem;
 }
 
 .fv__button-wrapper {
@@ -1139,28 +1815,26 @@ html {
 }
 
 .gallery {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
+}
+
+.gallery__label {
+	font-size: 1.125rem;
 }
 
 .gallery__title {
 	font-size: 2.25rem;
-	margin-bottom: 1.25rem;
+	margin-top: 0.75rem;
 }
 
 .gallery__text {
 	font-size: 1rem;
-	margin-bottom: 3.75rem;
+	margin-top: 3.75rem;
 }
 
 .gallery__items {
-	gap: 2rem;
 	grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery__image {
-	border-radius: 0.75rem;
 }
 
 .header {
@@ -1185,20 +1859,23 @@ html {
 }
 
 .inner {
-	max-width: 1150px;
-	padding-left: 25px;
-	padding-right: 25px;
+	max-width: 1320px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .instructor {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
+}
+
+.instructor__label {
+	font-size: 1.125rem;
 }
 
 .instructor__title {
 	font-size: 2.25rem;
-	margin-bottom: 3.75rem;
+	margin-top: 0.75rem;
 }
 
 .instructor__content {
@@ -1207,12 +1884,8 @@ html {
 	gap: 3.75rem;
 }
 
-.instructor__image-wrapper {
-	width: 40%;
-}
-
 .instructor__image {
-	border-radius: 0.75rem;
+	width: 40%;
 }
 
 .instructor__text-wrapper {
@@ -1221,65 +1894,55 @@ html {
 
 .instructor__name {
 	font-size: 1.75rem;
-	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .instructor__text {
 	font-size: 1rem;
 	line-height: 1.8;
-	margin-bottom: 1.25rem;
+	margin-top: 1.25rem;
 }
 
-.instructor__text--emphasis {
-	margin-bottom: 0;
+.lesson-card {
+	border-radius: 1.25rem;
+	padding: 2rem;
 }
 
-.lesson-step__number {
-	border-width: 0.25rem;
-	font-size: 1.75rem;
-	height: 3.5rem;
-	margin-bottom: 1.25rem;
-	width: 3.5rem;
+.lesson-card__title {
+	font-size: 1.25rem;
 }
 
-.lesson-step__title {
-	font-size: 1.5rem;
-	margin-bottom: 0.75rem;
+.lesson-card__content {
+	margin-top: 1.5rem;
 }
 
-.lesson-step__text {
-	font-size: 1rem;
-	line-height: 1.8;
+.lesson-card__text {
+	font-size: 0.9375rem;
+}
+
+.lesson-card__image {
+	border-radius: 0.75rem;
+	margin-top: 1.5rem;
 }
 
 .lesson {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
+}
+
+.lesson__label {
+	font-size: 1.125rem;
 }
 
 .lesson__title {
 	font-size: 2.25rem;
-	margin-bottom: 3.75rem;
+	margin-top: 0.75rem;
 }
 
-.lesson__steps {
-	align-items: flex-start;
-	flex-direction: row;
-	gap: 1.25rem;
-	justify-content: space-between;
-}
-
-.lesson__step:not(:last-child)::after {
-	-webkit-clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	bottom: auto;
-	clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	height: 1rem;
-	left: auto;
-	right: -1.875rem;
-	top: 1.5rem;
-	transform: none;
-	width: 3.125rem;
+.lesson__cards {
+	gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 3.75rem;
 }
 
 .price-card {
@@ -1289,7 +1952,10 @@ html {
 
 .price-card__amount {
 	font-size: 2.5rem;
-	margin-bottom: 2rem;
+}
+
+.price-card__list {
+	margin-top: 2rem;
 }
 
 .price-card__item {
@@ -1299,51 +1965,130 @@ html {
 }
 
 .price {
-	margin-top: 7.5rem;
 	padding-bottom: 5rem;
-	padding-top: 5rem;
+	padding-top: 10rem;
+}
+
+.price__inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50rem;
+}
+
+.price__label {
+	font-size: 1.125rem;
 }
 
 .price__title {
 	font-size: 2.25rem;
-	margin-bottom: 3.75rem;
+	margin-top: 0.75rem;
 }
 
-.schedule {
-	margin-top: 7.5rem;
-	padding-bottom: 5rem;
-	padding-top: 5rem;
+.price__description {
+	font-size: 1rem;
+	margin-top: 3.125rem;
 }
 
-.schedule__title {
-	font-size: 2.25rem;
-	margin-bottom: 3.75rem;
+.price__table-wrapper {
+	margin-top: 3.125rem;
 }
 
-.schedule__day {
-	margin-bottom: 2rem;
+.price__table-header {
+	font-size: 1rem;
+	padding: 1.25rem 1rem;
 }
 
-.schedule__day-text {
+.price__table-data {
+	font-size: 1rem;
+	padding: 1.25rem 1rem;
+}
+
+.price__courses {
+	gap: 2rem;
+	margin-top: 3.125rem;
+}
+
+.price__course {
+	padding: 2rem;
+}
+
+.price__course-title {
 	font-size: 1.5rem;
-	margin-bottom: 0.75rem;
 }
 
-.schedule__time {
-	font-size: 2rem;
+.price__course-list {
+	margin-top: 1.75rem;
 }
 
-.schedule__note {
+.price__course-item {
+	gap: 1.5rem;
+	padding: 1rem 0;
+}
+
+.price__course-term {
+	font-size: 1rem;
+	width: 6.25rem;
+}
+
+.price__course-desc {
 	font-size: 1rem;
 }
 
-.schedule__note-br {
-	display: none;
+.price__notes {
+	margin-top: 1.75rem;
+}
+
+.price__note {
+	font-size: 0.875rem;
+}
+
+.trial {
+	padding-bottom: 5rem;
+	padding-top: 10rem;
+}
+
+.trial__content {
+	flex-direction: row;
+	gap: 3.75rem;
+	justify-content: center;
+}
+
+.trial__text-wrapper {
+	text-align: left;
+}
+
+.trial__price {
+	font-size: 2.25rem;
+}
+
+.trial__text {
+	font-size: 2rem;
+	margin-top: 1rem;
+}
+
+.trial__message {
+	font-size: 1.125rem;
+	margin-top: 1.5rem;
+}
+
+.trial__button-wrapper {
+	margin-top: 2.5rem;
+}
+
+.trial__button {
+	border-radius: 2.1875rem;
+	font-size: 1.125rem;
+	padding: 1.125rem 3.75rem;
+}
+
+.trial__image {
+	height: 18.75rem;
+	width: 18.75rem;
 }
 
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1280px) {
 
 html {
 	font-size: 16px;

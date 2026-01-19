@@ -874,7 +874,7 @@ input.contact__form-radio:checked + .contact__form-radio-text {
 
 .fv__text {
 	color: #111;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 1.8;
 	margin-top: 1rem;
 }
@@ -1782,8 +1782,6 @@ html {
 }
 
 .fv__text {
-	font-size: 1.125rem;
-	line-height: 1.8;
 	margin-top: 1.25rem;
 }
 

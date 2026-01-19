@@ -74,13 +74,11 @@
 }
 
 .fv__text {
-  font-size: rem(16);
+  font-size: rem(18);
   line-height: 1.8;
   color: $black;
   margin-top: rem(16);
   @include mq(md) {
-    font-size: rem(18);
-    line-height: 1.8;
     margin-top: rem(20);
   }
 }
