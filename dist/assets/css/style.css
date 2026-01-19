@@ -486,22 +486,80 @@ legend {
 }
 
 .feature {
-	background-color: #fafafa;
+	background-color: #fefcf8;
 	margin-top: 5rem;
 	padding-bottom: 3.75rem;
 	padding-top: 3.75rem;
+}
+
+.feature__header {
+	text-align: center;
+}
+
+.feature__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .feature__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
-	margin-top: 2.5rem;
+	margin-top: 0.5rem;
 	text-align: center;
 }
 
-.feature__cards {
+.feature__items {
+	list-style: none;
 	margin-top: 2.5rem;
+}
+
+.feature__item {
+	border-bottom: 1px solid #e0e0e0;
+	display: flex;
+	gap: 1.25rem;
+	margin-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.feature__item:first-child {
+	margin-top: 0;
+}
+
+.feature__item:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.feature__item-number {
+	color: orange;
+	flex-shrink: 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature__item-content {
+	flex: 1;
+	padding-top: 0.25rem;
+}
+
+.feature__item-title {
+	color: #111;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.6;
+}
+
+.feature__item-text {
+	color: #111;
+	font-size: 0.875rem;
+	line-height: 1.8;
+	margin-top: 0.75rem;
 }
 
 .footer {
@@ -589,6 +647,27 @@ legend {
 	margin-top: 2rem;
 }
 
+.fv__list {
+	list-style: none;
+	margin-top: 1.5rem;
+}
+
+.fv__list-item {
+	color: #111;
+	font-size: 0.875rem;
+	line-height: 1.8;
+	margin-top: 0.75rem;
+}
+
+.fv__list-item:first-child {
+	margin-top: 0;
+}
+
+.fv__text--closing {
+	font-size: 0.8125rem;
+	margin-top: 1.5rem;
+}
+
 .fv__button-wrapper {
 	margin-top: 2rem;
 }
@@ -633,15 +712,16 @@ legend {
 }
 
 .gallery__items {
-	grid-gap: 1.5rem;
+	grid-gap: 0.5rem;
 	display: grid;
-	gap: 1.5rem;
+	gap: 0.5rem;
 	grid-template-columns: 1fr;
+	list-style: none;
+	margin-top: 2.5rem;
 }
 
 .gallery__image {
 	aspect-ratio: 4/3;
-	border-radius: 0.5rem;
 	overflow: hidden;
 	width: 100%;
 }
@@ -705,9 +785,11 @@ legend {
 }
 
 .instructor__content {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	margin-top: 2.5rem;
 }
 
 .instructor__image {
@@ -744,79 +826,87 @@ legend {
 	font-weight: 700;
 }
 
-.lesson-step__number {
-	align-items: center;
+.lesson-card {
 	background-color: #fff;
-	border: 0.1875rem solid green;
-	border-radius: 50%;
-	color: green;
-	display: inline-flex;
-	font-size: 1.5rem;
-	font-weight: 700;
-	height: 3rem;
-	justify-content: center;
-	width: 3rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem;
 }
 
-.lesson-step__title {
+.lesson-card__title {
 	color: green;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	font-weight: 700;
-	margin-top: 1rem;
+	line-height: 1.5;
+	text-align: center;
 }
 
-.lesson-step__text {
+.lesson-card__content {
+	flex: 1;
+	margin-top: 1.25rem;
+}
+
+.lesson-card__text {
 	color: #111;
 	font-size: 0.875rem;
 	line-height: 1.8;
-	margin-top: 0.5rem;
+	margin-top: 0.75rem;
 }
 
-.lesson-step__text {
-	color: #111;
-	font-size: 0.875rem;
-	line-height: 1.8;
+.lesson-card__text:first-child {
+	margin-top: 0;
+}
+
+.lesson-card__image {
+	aspect-ratio: 4/3;
+	border-radius: 0.5rem;
+	margin-top: 1.25rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.lesson-card__image img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .lesson {
-	background-color: #f9f9f9;
+	background-color: #fef8f3;
 	margin-top: 5rem;
 	padding-bottom: 3.75rem;
 	padding-top: 3.75rem;
+}
+
+.lesson__header {
+	text-align: center;
+}
+
+.lesson__label {
+	color: orange;
+	font-family: "Poppins", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
 }
 
 .lesson__title {
 	color: green;
 	font-size: 1.75rem;
 	font-weight: 700;
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+.lesson__cards {
+	grid-gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+	list-style: none;
 	margin-top: 2.5rem;
-	text-align: center;
-}
-
-.lesson__steps {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	gap: 2.5rem;
-}
-
-.lesson__step {
-	flex: 1;
-	position: relative;
-	text-align: center;
-}
-
-.lesson__step:not(:last-child)::after {
-	-webkit-clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	background-color: green;
-	bottom: -2rem;
-	clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	content: "";
-	height: 1.25rem;
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
-	width: 2.5rem;
 }
 
 .price-card {
@@ -1093,13 +1183,46 @@ html {
 	padding-top: 5rem;
 }
 
+.feature__inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 50rem;
+}
+
+.feature__label {
+	font-size: 1.125rem;
+}
+
 .feature__title {
 	font-size: 2.25rem;
+	margin-top: 0.75rem;
+}
+
+.feature__items {
 	margin-top: 3.75rem;
 }
 
-.feature__cards {
-	margin-top: 5rem;
+.feature__item {
+	gap: 2rem;
+	margin-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.feature__item-number {
+	font-size: 5rem;
+}
+
+.feature__item-content {
+	padding-top: 0.5rem;
+}
+
+.feature__item-title {
+	font-size: 1.375rem;
+}
+
+.feature__item-text {
+	font-size: 1rem;
+	margin-top: 1rem;
 }
 
 .footer {
@@ -1169,6 +1292,20 @@ html {
 	margin-top: 2.5rem;
 }
 
+.fv__list {
+	margin-top: 2rem;
+}
+
+.fv__list-item {
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+.fv__text--closing {
+	font-size: 0.875rem;
+	margin-top: 2rem;
+}
+
 .fv__button-wrapper {
 	margin-top: 2.5rem;
 }
@@ -1196,12 +1333,7 @@ html {
 }
 
 .gallery__items {
-	gap: 2rem;
 	grid-template-columns: repeat(3, 1fr);
-}
-
-.gallery__image {
-	border-radius: 0.75rem;
 }
 
 .header {
@@ -1267,27 +1399,26 @@ html {
 	margin-top: 1.25rem;
 }
 
-.lesson-step__number {
-	border-width: 0.25rem;
-	font-size: 1.75rem;
-	height: 3.5rem;
-	width: 3.5rem;
+.lesson-card {
+	border-radius: 1.25rem;
+	padding: 2rem;
 }
 
-.lesson-step__title {
-	font-size: 1.5rem;
-	margin-top: 1.25rem;
+.lesson-card__title {
+	font-size: 1.25rem;
 }
 
-.lesson-step__text {
-	font-size: 1rem;
-	line-height: 1.8;
-	margin-top: 0.75rem;
+.lesson-card__content {
+	margin-top: 1.5rem;
 }
 
-.lesson-step__text {
-	font-size: 1rem;
-	line-height: 1.8;
+.lesson-card__text {
+	font-size: 0.9375rem;
+}
+
+.lesson-card__image {
+	border-radius: 0.75rem;
+	margin-top: 1.5rem;
 }
 
 .lesson {
@@ -1296,28 +1427,19 @@ html {
 	padding-top: 5rem;
 }
 
+.lesson__label {
+	font-size: 1.125rem;
+}
+
 .lesson__title {
 	font-size: 2.25rem;
+	margin-top: 0.75rem;
+}
+
+.lesson__cards {
+	gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
 	margin-top: 3.75rem;
-}
-
-.lesson__steps {
-	align-items: flex-start;
-	flex-direction: row;
-	gap: 1.25rem;
-	justify-content: space-between;
-}
-
-.lesson__step:not(:last-child)::after {
-	-webkit-clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	bottom: auto;
-	clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%, 12px 50%);
-	height: 1rem;
-	left: auto;
-	right: -1.875rem;
-	top: 1.5rem;
-	transform: none;
-	width: 3.125rem;
 }
 
 .price-card {

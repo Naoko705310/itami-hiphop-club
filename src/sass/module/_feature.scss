@@ -5,7 +5,7 @@
   margin-top: rem(80);
   padding-top: rem(60);
   padding-bottom: rem(60);
-  background-color: #fafafa;
+  background-color: #fefcf8;
   @include mq(md) {
     margin-top: rem(120);
     padding-top: rem(80);
@@ -15,6 +15,25 @@
 
 .feature__inner {
   @include mq(md) {
+    max-width: rem(800);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.feature__header {
+  text-align: center;
+  @include mq(md) {
+  }
+}
+
+.feature__label {
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $color-accent;
+  font-family: $second-font-family;
+  @include mq(md) {
+    font-size: rem(18);
   }
 }
 
@@ -23,21 +42,81 @@
   font-weight: $bold;
   text-align: center;
   color: $color-main;
-  margin-top: rem(40);
+  margin-top: rem(8);
   @include mq(md) {
     font-size: rem(36);
+    margin-top: rem(12);
+  }
+}
+
+.feature__items {
+  list-style: none;
+  margin-top: rem(40);
+  @include mq(md) {
     margin-top: rem(60);
   }
 }
 
-.feature__cards {
-  margin-top: rem(40);
+.feature__item {
+  display: flex;
+  gap: rem(20);
+  padding-bottom: rem(32);
+  margin-top: rem(32);
+  border-bottom: 1px solid #e0e0e0;
   @include mq(md) {
-    margin-top: rem(80);
+    gap: rem(32);
+    padding-bottom: rem(40);
+    margin-top: rem(40);
   }
 }
 
-.feature__card {
+.feature__item:first-child {
+  margin-top: 0;
+}
+
+.feature__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.feature__item-number {
+  flex-shrink: 0;
+  font-size: rem(64);
+  font-weight: $bold;
+  color: $color-accent;
+  font-family: $second-font-family;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   @include mq(md) {
+    font-size: rem(80);
+  }
+}
+
+.feature__item-content {
+  flex: 1;
+  padding-top: rem(4);
+  @include mq(md) {
+    padding-top: rem(8);
+  }
+}
+
+.feature__item-title {
+  font-size: rem(18);
+  font-weight: $bold;
+  color: $black;
+  line-height: 1.6;
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+
+.feature__item-text {
+  font-size: rem(14);
+  line-height: 1.8;
+  color: $black;
+  margin-top: rem(12);
+  @include mq(md) {
+    font-size: rem(16);
+    margin-top: rem(16);
   }
 }

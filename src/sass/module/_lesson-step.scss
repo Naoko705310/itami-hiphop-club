@@ -1,60 +1,65 @@
 @use "global" as *;
 
-// レッスンステップ
-.lesson-step {
-  @include mq(md) {
-  }
-}
-
-.lesson-step__number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: rem(48);
-  height: rem(48);
-  font-size: rem(24);
-  font-weight: $bold;
-  color: $color-main;
+// レッスンカード
+.lesson-card {
   background-color: $white;
-  border: rem(3) solid $color-main;
-  border-radius: 50%;
+  border-radius: rem(16);
+  padding: rem(24);
+  box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
   @include mq(md) {
-    width: rem(56);
-    height: rem(56);
-    font-size: rem(28);
-    border-width: rem(4);
+    padding: rem(32);
+    border-radius: rem(20);
   }
 }
 
-.lesson-step__title {
-  font-size: rem(20);
+.lesson-card__title {
+  font-size: rem(18);
   font-weight: $bold;
   color: $color-main;
-  margin-top: rem(16);
+  text-align: center;
+  line-height: 1.5;
   @include mq(md) {
-    font-size: rem(24);
-    margin-top: rem(20);
+    font-size: rem(20);
   }
 }
 
-.lesson-step__text {
-  font-size: rem(14);
-  line-height: 1.8;
-  color: $black;
-  margin-top: rem(8);
+.lesson-card__content {
+  margin-top: rem(20);
+  flex: 1;
   @include mq(md) {
-    font-size: rem(16);
-    line-height: 1.8;
-    margin-top: rem(12);
+    margin-top: rem(24);
   }
 }
 
-.lesson-step__text {
+.lesson-card__text {
   font-size: rem(14);
   line-height: 1.8;
   color: $black;
+  margin-top: rem(12);
   @include mq(md) {
-    font-size: rem(16);
-    line-height: 1.8;
+    font-size: rem(15);
+  }
+}
+
+.lesson-card__text:first-child {
+  margin-top: 0;
+}
+
+.lesson-card__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: rem(8);
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(24);
+    border-radius: rem(12);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

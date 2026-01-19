@@ -33,7 +33,9 @@
 .instructor__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: rem(32);
+  margin-top: rem(40);
   @include mq(md) {
     flex-direction: row;
     align-items: center;
