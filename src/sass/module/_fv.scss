@@ -23,13 +23,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: rem(24);
   @include mq(md) {
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
     gap: rem(16);
-    margin-bottom: rem(32);
   }
 }
 
@@ -39,11 +37,11 @@
   color: $color-main;
   font-family: $second-font-family;
   letter-spacing: rem(4);
-  margin-bottom: rem(8);
+  margin-top: rem(8);
   @include mq(md) {
     font-size: rem(64);
     letter-spacing: rem(6);
-    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -61,11 +59,11 @@
   font-weight: $bold;
   line-height: 1.6;
   color: $black;
-  margin-bottom: rem(24);
+  margin-top: rem(24);
   @include mq(md) {
     font-size: rem(48);
     line-height: 1.5;
-    margin-bottom: rem(32);
+    margin-top: rem(32);
   }
 }
 
@@ -79,20 +77,20 @@
   font-size: rem(16);
   line-height: 1.8;
   color: $black;
-  margin-bottom: rem(16);
+  margin-top: rem(16);
   @include mq(md) {
     font-size: rem(18);
     line-height: 1.8;
-    margin-bottom: rem(20);
+    margin-top: rem(20);
   }
 }
 
 .fv__text--sub {
   font-size: rem(14);
-  margin-bottom: rem(32);
+  margin-top: rem(32);
   @include mq(md) {
     font-size: rem(16);
-    margin-bottom: rem(40);
+    margin-top: rem(40);
   }
 }
 

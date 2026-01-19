@@ -23,10 +23,10 @@
   font-weight: $bold;
   text-align: center;
   color: $color-main;
-  margin-bottom: rem(40);
+  margin-top: rem(40);
   @include mq(md) {
     font-size: rem(36);
-    margin-bottom: rem(60);
+    margin-top: rem(60);
   }
 }
 

@@ -19,10 +19,18 @@
   font-size: rem(32);
   font-weight: $bold;
   color: $color-accent;
-  margin-bottom: rem(24);
   @include mq(md) {
     font-size: rem(40);
-    margin-bottom: rem(32);
+  }
+}
+
+.price-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
   }
 }
 

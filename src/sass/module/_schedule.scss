@@ -23,10 +23,10 @@
   font-weight: $bold;
   text-align: center;
   color: $color-main;
-  margin-bottom: rem(40);
+  margin-top: rem(40);
   @include mq(md) {
     font-size: rem(36);
-    margin-bottom: rem(60);
+    margin-top: rem(60);
   }
 }
 
@@ -40,9 +40,9 @@
 }
 
 .schedule__day {
-  margin-bottom: rem(24);
+  margin-top: rem(24);
   @include mq(md) {
-    margin-bottom: rem(32);
+    margin-top: rem(32);
   }
 }
 
@@ -50,10 +50,8 @@
   font-size: rem(20);
   font-weight: $bold;
   color: $black;
-  margin-bottom: rem(8);
   @include mq(md) {
     font-size: rem(24);
-    margin-bottom: rem(12);
   }
 }
 
@@ -61,8 +59,10 @@
   font-size: rem(24);
   font-weight: $bold;
   color: $color-accent;
+  margin-top: rem(8);
   @include mq(md) {
     font-size: rem(32);
+    margin-top: rem(12);
   }
 }
 
@@ -70,8 +70,10 @@
   font-size: rem(14);
   line-height: 1.8;
   color: $black;
+  margin-top: rem(24);
   @include mq(md) {
     font-size: rem(16);
+    margin-top: rem(32);
   }
 }
 

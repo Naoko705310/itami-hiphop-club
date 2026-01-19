@@ -23,10 +23,10 @@
   font-size: rem(28);
   font-weight: $bold;
   color: $white;
-  margin-bottom: rem(16);
+  margin-top: rem(16);
   @include mq(md) {
     font-size: rem(36);
-    margin-bottom: rem(20);
+    margin-top: rem(20);
   }
 }
 
@@ -34,11 +34,11 @@
   font-size: rem(16);
   line-height: 1.8;
   color: $white;
-  margin-bottom: rem(40);
+  margin-top: rem(40);
   @include mq(md) {
     font-size: rem(18);
     line-height: 1.8;
-    margin-bottom: rem(48);
+    margin-top: rem(48);
   }
 }
 
@@ -49,12 +49,12 @@
   max-width: rem(400);
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: rem(40);
+  margin-top: rem(40);
   @include mq(md) {
     flex-direction: row;
     gap: rem(24);
     max-width: rem(600);
-    margin-bottom: rem(48);
+    margin-top: rem(48);
   }
 }
 
