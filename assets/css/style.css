@@ -1098,14 +1098,17 @@ input[type=checkbox].contact__form-checkbox:focus {
 
 .header__button {
 	-webkit-text-decoration: none;
+	align-items: center;
 	background-color: transparent;
 	border: 2px solid orange;
-	border-radius: 1.25rem;
+	border-radius: 1.5rem;
 	color: orange;
-	display: inline-block;
-	font-size: 0.875rem;
+	display: inline-flex;
+	font-size: 0.9375rem;
 	font-weight: 700;
-	padding: 0.625rem 1.25rem;
+	justify-content: center;
+	min-height: 3rem;
+	padding: 0.875rem 1.75rem;
 	text-align: center;
 	text-decoration: none;
 	transition: all 0.3s;
@@ -2033,9 +2036,10 @@ input[type=checkbox].contact__form-checkbox:checked::after {
 }
 
 .header__button {
-	border-radius: 1.5625rem;
+	border-radius: 1.75rem;
 	font-size: 1rem;
-	padding: 0.75rem 1.5rem;
+	min-height: 3.25rem;
+	padding: 1rem 2rem;
 }
 
 .inner {
